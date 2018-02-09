@@ -31,7 +31,7 @@ global $hook_suffix;
 	?>
 	<p id="footer-left" class="alignleft">
 		<?php
-		$text = sprintf( __( 'Thank you for creating with <a href="%s">WordPress</a>.' ), __( 'https://wordpress.org/' ) );
+		$text = '米克斯财会系统 <a href="http://www.mixfs.com">www.mixfs.com</a>' ;
 		/**
 		 * Filters the "Thank you" text displayed in the admin footer.
 		 *
@@ -44,19 +44,15 @@ global $hook_suffix;
 	</p>
 	<p id="footer-upgrade" class="alignright">
 		<?php
+		$text = 'QQ: 55517131 &nbsp; E-mail: <a href="mailto:sph999@hotmail.com?subject=米克斯财会系统">sph999@hotmail.com</a>' ;
 		/**
-		 * Filters the version/update text displayed in the admin footer.
+		 * Filters the "Thank you" text displayed in the admin footer.
 		 *
-		 * WordPress prints the current version and update information,
-		 * using core_update_footer() at priority 10.
+		 * @since 2.8.0
 		 *
-		 * @since 2.3.0
-		 *
-		 * @see core_update_footer()
-		 *
-		 * @param string $content The content that will be printed.
+		 * @param string $text The content that will be printed.
 		 */
-		echo apply_filters( 'update_footer', '' );
+		echo apply_filters( 'admin_footer_text', '<span id="footer-thankyou">' . $text . '</span>' );
 		?>
 	</p>
 	<div class="clear"></div>
