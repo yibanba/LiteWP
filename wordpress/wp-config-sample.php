@@ -76,6 +76,11 @@ $table_prefix  = 'wp_';
 define('WPLANG', 'zh_CN');
 
 /**
+ * To completely disable all types of automatic updates, core or otherwise
+ */
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+
+/**
  * For developers: WordPress debugging mode.
  *
  * Change this to true to enable the display of notices during development.
