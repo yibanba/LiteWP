@@ -170,14 +170,14 @@ function wp_default_scripts( &$scripts ) {
 	$scripts->add( 'wp-lists', "/wp-includes/js/wp-lists$suffix.js", array( 'wp-ajax-response', 'jquery-color' ), false, 1 );
 
 	// WordPress no longer uses or bundles Prototype or script.aculo.us. These are now pulled from an external source.
-	$scripts->add( 'prototype', 'https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js', array(), '1.7.1');
-	$scripts->add( 'scriptaculous-root', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js', array('prototype'), '1.9.0');
-	$scripts->add( 'scriptaculous-builder', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/builder.js', array('scriptaculous-root'), '1.9.0');
-	$scripts->add( 'scriptaculous-dragdrop', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/dragdrop.js', array('scriptaculous-builder', 'scriptaculous-effects'), '1.9.0');
-	$scripts->add( 'scriptaculous-effects', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/effects.js', array('scriptaculous-root'), '1.9.0');
-	$scripts->add( 'scriptaculous-slider', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/slider.js', array('scriptaculous-effects'), '1.9.0');
-	$scripts->add( 'scriptaculous-sound', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/sound.js', array( 'scriptaculous-root' ), '1.9.0' );
-	$scripts->add( 'scriptaculous-controls', 'https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/controls.js', array('scriptaculous-root'), '1.9.0');
+	$scripts->add( 'prototype', '/wp-includes/googleapis/prototype.js', array(), '1.7.1');
+	$scripts->add( 'scriptaculous-root', '/wp-includes/googleapis/scriptaculous.js', array('prototype'), '1.9.0');
+	$scripts->add( 'scriptaculous-builder', '/wp-includes/googleapis/builder.js', array('scriptaculous-root'), '1.9.0');
+	$scripts->add( 'scriptaculous-dragdrop', '/wp-includes/googleapis/dragdrop.js', array('scriptaculous-builder', 'scriptaculous-effects'), '1.9.0');
+	$scripts->add( 'scriptaculous-effects', '/wp-includes/googleapis/effects.js', array('scriptaculous-root'), '1.9.0');
+	$scripts->add( 'scriptaculous-slider', '/wp-includes/googleapis/slider.js', array('scriptaculous-effects'), '1.9.0');
+	$scripts->add( 'scriptaculous-sound', '/wp-includes/googleapis/sound.js', array( 'scriptaculous-root' ), '1.9.0' );
+	$scripts->add( 'scriptaculous-controls', '/wp-includes/googleapis/controls.js', array('scriptaculous-root'), '1.9.0');
 	$scripts->add( 'scriptaculous', false, array('scriptaculous-dragdrop', 'scriptaculous-slider', 'scriptaculous-controls') );
 
 	// not used in core, replaced by Jcrop.js
